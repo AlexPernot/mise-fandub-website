@@ -1,0 +1,19 @@
+{
+  "name": "mise-fandub-website",
+  "version": "0.0.1",
+  "description": "The website for Paf's Monkey Island French Fandub",
+  "license": "UNLICENSED",
+  "author": "Alex Pernot",
+  "scripts": {
+    "build": "NODE_ENV=production npx tailwindcss-cli build ./css/main.css -o ./css/output.css"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.0.4",
+    "postcss": "^8.1.14",
+    "tailwindcss": "^2.0.1",
+    "tailwindcss-cli": "^0.1.2"
+  }
+}

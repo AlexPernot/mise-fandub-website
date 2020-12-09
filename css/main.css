@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Weathered;
+  src: url("../fonts/TICO.TTF");
+}
+
+body {
+  font-family: Weathered, serif;
+  text-shadow: #242323 3px 2px;
+  background: url("../img/bg-home.png") no-repeat center center fixed;
+  background-size: cover;
+  backdrop-filter: blur(4px);
+}
+
+#shadow-container {
+  background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.6) 20%, rgba(0,0,0,0.6) 80%, rgba(0,0,0,0) 100%);
+}
+
+main a {
+  @apply underline;
+}
+
+h1 {
+  @apply text-yellow-500 text-3xl;
+}
+
+h2 {
+  @apply text-yellow-400 text-3xl;
+}
+
+p {
+  @apply text-xl;
+}
