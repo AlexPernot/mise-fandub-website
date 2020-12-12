@@ -3,34 +3,99 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: Weathered;
-  src: url("../fonts/TICO.TTF");
+    font-family: Weathered;
+    src: url("../fonts/TICO.TTF");
 }
 
 body {
-  font-family: Weathered, serif;
-  text-shadow: #242323 3px 2px;
-  background: url("../img/bg-home.png") no-repeat center center fixed;
-  background-size: cover;
-  backdrop-filter: blur(4px);
+    font-family: Weathered, serif;
+    text-shadow: #242323 3px 2px;
+    background: url("../img/bg-home.jpg") no-repeat center center fixed;
+    background-size: cover;
+    backdrop-filter: blur(4px);
+    color: white;
 }
 
 #shadow-container {
-  background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.6) 20%, rgba(0,0,0,0.6) 80%, rgba(0,0,0,0) 100%);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0.6) 80%, rgba(0, 0, 0, 0) 100%);
 }
 
-main a {
-  @apply underline;
+.main-container {
+    @apply mx-auto py-12 px-4 md:px-36 text-center max-w-6xl text-xl;
+}
+
+footer {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 0.5) 80%, rgba(0, 0, 0, 0) 100%);
+}
+
+a {
+    @apply underline;
 }
 
 h1 {
-  @apply text-yellow-500 text-3xl;
+    @apply text-yellow-500 text-3xl;
 }
 
 h2 {
-  @apply text-yellow-400 text-3xl;
+    @apply text-yellow-400 text-3xl;
 }
 
 p {
-  @apply text-xl;
+    @apply text-xl;
+}
+
+.grid-container {
+    @apply grid lg:grid-cols-4 lg:gap-8 px-4 md:px-8;
+}
+
+.credits {
+    @apply mb-10 lg:p-6 lg:col-span-2;
+}
+
+.directeur {
+    @apply lg:col-start-2;
+}
+
+.profile {
+    @apply flex flex-col md:flex-row mb-8;
+}
+
+.credits .profile-pic {
+    @apply bg-cover bg-center self-center md:mr-8 md:self-auto;
+    height: 300px;
+    width: 300px;
+}
+
+.credits .bio-container {
+    @apply flex flex-col justify-between;
+}
+
+.credits h3 {
+    @apply text-5xl py-4 md:py-0;
+}
+
+.credits h4 {
+    @apply text-3xl py-4 md:py-0;
+}
+
+.credits > p {
+    @apply text-justify;
+}
+
+.thanks li {
+    @apply py-4;
+}
+
+.video-responsive {
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.video-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
 }
